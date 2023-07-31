@@ -1,5 +1,5 @@
 const User = require('../models/users');
-const NotFound = require('../errors/errorCodes');
+const NotFound = require('../errors/notFoundErr');
 const STATUS_CODE = require('../errors/errorCodes');
 
 module.exports.createUser = (req, res) => {

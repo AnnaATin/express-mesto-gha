@@ -1,5 +1,5 @@
 const Card = require('../models/card');
-const NotFound = require('../errors/errorCodes');
+const NotFound = require('../errors/notFoundErr');
 const STATUS_CODE = require('../errors/errorCodes');
 
 module.exports.createCard = (req, res) => {

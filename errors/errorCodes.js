@@ -6,12 +6,4 @@ const STATUS_CODE = {
   serverError: 500,
 };
 
-class NotFound extends Error {
-  constructor() {
-    super();
-    this.name = this.constructor.name;
-  }
-}
-
 module.exports = STATUS_CODE;
-module.exports = NotFound;
