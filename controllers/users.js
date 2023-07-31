@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../models/users');
 const NotFound = require('../errors/errorCodes');
 const STATUS_CODE = require('../errors/errorCodes');
 
