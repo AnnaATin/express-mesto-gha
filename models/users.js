@@ -32,7 +32,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       select: false,
-      minlength: [8, 'Минимальная длина поля - 8 символов'],
     },
     email: {
       unique: true,
