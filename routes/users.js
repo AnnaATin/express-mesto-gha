@@ -10,7 +10,7 @@ const { updateUserValidation, userIdValidation, validationUpdateAvatar } = requi
 
 userRouter.get('/', getUsers);
 userRouter.get('/me', getCurrentUser);
-userRouter.post('/:userId', userIdValidation, getUserById);
+userRouter.get('/:userId', userIdValidation, getUserById);
 userRouter.patch('/me', updateUserValidation, updateUser);
 userRouter.patch('/me/avatar', validationUpdateAvatar, updateAvatar);
 
