@@ -57,7 +57,8 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.getUserById = (req, res, next) => {
-  User.findById(req.params.id)
+  const { userId } = req.params;
+  User.findById(userId)
     .orFail(() => {
       throw new NotFound('Пользователь по такому _id не найден.');
     })
@@ -71,7 +72,7 @@ module.exports.getUserById = (req, res, next) => {
     })
     .catch((e) => {
       if (e.name === 'CastError') {
-        next(new BadRequest('Запрашиваемый пользователь не найден.'));
+        next(new BadRequest('Передан некорректный id.'));
       } else if (e.name === 'NotFoundError') {
         next(new NotFound('Пользователь по такому _id не найден.'));
       } else {
